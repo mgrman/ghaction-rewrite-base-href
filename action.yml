@@ -1,5 +1,5 @@
 name: 'Rewrite base href'
-description: 'Updates the base href within an HTML file'
+description: 'Updates the base href and adds redirection for Github Pages within an HTML file'
 author: 'SteveSandersonMS'
 branding:
   color: 'purple'
@@ -11,6 +11,9 @@ inputs:
     required: true
   base_href:
     description: 'New base href to be applied'
+    required: true
+  root_path:
+    description: 'Path to the root'
     required: true
 
 runs:
