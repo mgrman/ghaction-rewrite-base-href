@@ -3,7 +3,8 @@ const fs = require('fs');
 
 try {
   const htmlPath = core.getInput('html_path');
-  const target404Path = core.getInput('root_path')+`/404.html`;
+  const target404Path = core.getInput('root_path')+'/404.html';
+  const nojekyllPath = core.getInput('root_path')+'/.nojekyll';
   const baseHref = core.getInput('base_href');
   
   const redirectJs = `
@@ -89,6 +90,7 @@ try {
   
   
   fs.writeFileSync(target404Path, source404);
+  fs.writeFileSync(nojekyllPath, '');
   
   
 } catch (error) {
